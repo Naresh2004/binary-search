@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int a[6]={1,4,6,7,8,9},item,k=0,lb=0,ub=5,mid;
+    clrscr();
+    printf("Enter the search item");
+    scanf("%d",&item);
+    while(lb<=ub)
+    {
+mid=(lb+ub)/2;
+if(a[mid]==item)
+{
+    k=1;
+    break;
+}
+if(a[mid]<item)
+lb=mid+1;
+else
+ub=mid-1;
+    }
+    if(k==1)
+    
+printf("search location at item %d",mid);
+else 
+printf("item is not found");
+    
+    getch();
+}
+
+
